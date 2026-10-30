@@ -1,0 +1,87 @@
+{
+  "last_updated": "2026-10-27T18:23:42.317446",
+  "dataset_source": "Demo Dataset (Credit Card Transactions)",
+  "features": [
+    "Time",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "Amount"
+  ],
+  "target_column": "Class",
+  "train_samples": 226980,
+  "test_samples": 56746,
+  "models": {
+    "isolation_forest": {
+      "name": "Isolation Forest",
+      "file": "isolation_forest.joblib",
+      "trained_at": "2026-10-27T18:21:16.059903",
+      "training_time_sec": 1.337,
+      "parameters": {
+        "n_estimators": 100,
+        "contamination": 0.02,
+        "random_state": 42
+      }
+    },
+    "lof": {
+      "name": "Local Outlier Factor (LOF)",
+      "file": "lof.joblib",
+      "trained_at": "2026-10-27T18:23:00.597467",
+      "training_time_sec": 0.701,
+      "parameters": {
+        "n_neighbors": 20,
+        "contamination": 0.02,
+        "novelty": true
+      }
+    },
+    "one_class_svm": {
+      "name": "One-Class SVM",
+      "file": "one_class_svm.joblib",
+      "trained_at": "2026-10-27T18:23:42.317469",
+      "training_time_sec": 2.608,
+      "parameters": {
+        "kernel": "rbf",
+        "nu": 0.03,
+        "gamma": "scale"
+      }
+    },
+    "autoencoder": {
+      "name": "Neural Autoencoder",
+      "file": "autoencoder.joblib",
+      "trained_at": "2026-10-01T09:06:31.030005",
+      "training_time_sec": 0.251,
+      "parameters": {
+        "epochs": 150,
+        "batch_size": 128,
+        "learning_rate": 0.001,
+        "latent_dim": 8,
+        "contamination": 0.02
+      }
+    }
+  }
+}
